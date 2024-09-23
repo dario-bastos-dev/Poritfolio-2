@@ -63,6 +63,7 @@ margin-top: -120px;
         font-family: ${({theme}) => theme.font.ubunto};
         font-weight: bold;
         font-size: ${({theme}) => theme.fontSize.title};
+        margin: 0 0 -15px 0;
       }
       p {
         font-family: ${({theme}) => theme.font.openSans};
@@ -70,6 +71,12 @@ margin-top: -120px;
         font-size: ${({theme}) => theme.fontSize.subtitle};
       }
       
+    }
+    .servicos {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      grid-gap: auto;
     }
   }
 `;
