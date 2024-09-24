@@ -1,5 +1,32 @@
 import styled from "styled-components";
 
+export const StyledButton = styled.a`
+  padding: 25px 15px;
+  background-color: transparent;
+  color: ${({ theme }) => theme.colors.textWhite};
+  font-family: ${({ theme }) => theme.font.openSans}, sans-serif;
+  font-size: ${({ theme }) => theme.fontSize.button};
+  font-weight: bold;
+  border-radius: 8px;
+  box-shadow: 20px 20px 30px ${({ theme }) => theme.shadows.shadow1},
+    -20px -20px 30px ${({ theme }) => theme.shadows.shadowWhite4};
+  &:active {
+    color: ${({ theme }) => theme.colors.gray};
+    box-shadow: inset 10px 10px 30px ${({ theme }) => theme.shadows.shadow1},
+      inset -10px -10px 30px ${({ theme }) => theme.shadows.shadowWhite4};
+  }
+`;
+export const StyledButton2 = styled(StyledButton)`
+  box-shadow: 20px 20px 30px ${({ theme }) => theme.shadows.shadowBlack3},
+    -20px -20px 30px ${({ theme }) => theme.shadows.shadowWhite3};
+
+  &:active {
+    box-shadow: inset 10px 10px 30px
+        ${({ theme }) => theme.shadows.shadowBlack3},
+      inset -10px -10px 30px ${({ theme }) => theme.shadows.shadowWhite3};
+  }
+`;
+
 export const StyledSection1 = styled.section`
   background-image: url("src/assets/bg.jpg");
   background-repeat: no-repeat;
@@ -27,56 +54,74 @@ export const StyledSection1 = styled.section`
           color: ${({ theme }) => theme.colors.blue1};
         }
       }
-      a {
-        padding: 25px 10px;
-        background-color: ${({ theme }) => theme.colors.textWhite};
-        color: ${({ theme }) => theme.colors.blue3};
-        font-family: ${({ theme }) => theme.font.openSans}, sans-serif;
-        font-size: ${({ theme }) => theme.fontSize.button};
-        font-weight: bold;
-        border-radius: 8px;
-        box-shadow: 10px 10px 0px ${({ theme }) => theme.colors.blue3};
-        &:active {
-          box-shadow: none;
-          position: relative;
-          top: 10px;
-          left: 10px;
-        }
-      }
     }
   }
 `;
 
 export const StyledSection2 = styled.section`
-background-color: ${({ theme }) => theme.colors.blue3};
-margin-top: -120px;
+  background-color: ${({ theme }) => theme.colors.blue3};
+  margin-top: -120px;
+  height: 135vh;
   .container {
     padding: 60px 0 0 0;
-    color: ${({theme}) => theme.colors.textWhite};
+    color: ${({ theme }) => theme.colors.textWhite};
     display: grid;
-    grid-template-rows: 25vh 50vh 25vh;
+    grid-template-rows: 20vh 90vh 10vh;
     .ttitle-subtitle {
       text-align: center;
       text-transform: uppercase;
       letter-spacing: 10px;
       h2 {
-        font-family: ${({theme}) => theme.font.ubunto};
+        font-family: ${({ theme }) => theme.font.ubunto};
         font-weight: bold;
-        font-size: ${({theme}) => theme.fontSize.title};
+        font-size: ${({ theme }) => theme.fontSize.title};
         margin: 0 0 -15px 0;
       }
       p {
-        font-family: ${({theme}) => theme.font.openSans};
+        font-family: ${({ theme }) => theme.font.openSans};
         font-weight: normal;
-        font-size: ${({theme}) => theme.fontSize.subtitle};
+        font-size: ${({ theme }) => theme.fontSize.subtitle};
       }
-      
     }
     .servicos {
+      width: 50rem;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       grid-template-rows: repeat(2, 1fr);
-      grid-gap: auto;
+      grid-gap: 100px;
+      justify-self: center;
+      & > div {
+        width: 18rem;
+        height: 18rem;
+        padding: 20px;
+        box-shadow: -20px 20px 60px ${({ theme }) => theme.shadows.shadowBlack3},
+          20px -20px 60px ${({ theme }) => theme.shadows.shadowWhite3};
+        border-radius: 20px;
+        & > div {
+          width: 100%;
+          height: 100%;
+          display: grid;
+          justify-items: center;
+          align-items: center;
+          box-shadow: inset 20px -20px 60px ${({ theme }) => theme.shadows.shadowWhite3},
+            inset -20px 20px 60px ${({ theme }) => theme.shadows.shadowBlack3};
+          border-radius: 15px;
+          & > p {
+            width: 220px;
+            font-family: ${({ theme }) => theme.font.openSans};
+            font-size: ${({ theme }) => theme.fontSize.subtitle};
+            font-weight: bold;
+            text-align: center;
+          }
+          & > svg {
+            margin: auto 0 0 0;
+          }
+        }
+      }
+    }
+    & > .button {
+      margin: 60px 0 0 0;
+      justify-self: center;
     }
   }
 `;

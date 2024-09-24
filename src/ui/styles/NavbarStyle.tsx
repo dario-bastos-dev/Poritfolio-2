@@ -20,20 +20,22 @@ const NavbarStyle = styled.nav`
     align-items: center;
     margin: 0 20px 0 0;
     li.btn {
-      padding: 5px 10px;
+      padding: 8px 10px;
+      margin: 0 0 0 35px;
       width: 100px;
       text-align: center;
       border-radius: 5px;
-      background-color: ${({ theme }) => theme.colors.textWhite};
-      box-shadow: 6px 6px 0px ${({ theme }) => theme.colors.blue2};
+      background-color: transparent;
+      box-shadow: -10px -10px 10px ${({ theme }) => theme.shadows.shadowBlack3},
+        10px 10px 10px ${({ theme }) => theme.shadows.shadowWhite3};
       a {
-        color: ${({ theme }) => theme.colors.blue2};
+        color: ${({ theme }) => theme.colors.textWhite};
       }
       &:active {
-        position: relative;
-        top: 6px;
-        left: 6px;
-        box-shadow: none;
+        color: ${({ theme }) => theme.colors.gray};
+        box-shadow: inset 10px 10px 10px
+            ${({ theme }) => theme.shadows.shadowBlack3},
+          inset -10px -10px 10px ${({ theme }) => theme.shadows.shadowWhite3};
       }
       &:hover {
         border-bottom: none;
@@ -41,7 +43,7 @@ const NavbarStyle = styled.nav`
     }
     li {
       margin: 0 10px;
-      font-family: ${({theme}) => theme.font.openSans}, sans-serif;
+      font-family: ${({ theme }) => theme.font.openSans}, sans-serif;
 
       &:hover {
         border-bottom: 2px solid ${({ theme }) => theme.colors.blue1};

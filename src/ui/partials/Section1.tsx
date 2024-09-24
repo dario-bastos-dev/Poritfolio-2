@@ -1,4 +1,4 @@
-import {StyledSection1} from "../styles/SectionStyles";
+import {StyledButton, StyledSection1} from "../styles/SectionStyles";
 
 const Section1 = () => {
   return (
@@ -9,7 +9,7 @@ const Section1 = () => {
               Transforme Seu Negócio com
               <span> Soluções Digitais Sob Medida</span>
             </h1>
-            <a href="" >Solicitar Orçamento</a>
+            <StyledButton href="#">Solicitar Orçamento</StyledButton>
           </div>
         </div>
       </StyledSection1>
