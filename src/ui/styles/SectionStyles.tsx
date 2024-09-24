@@ -61,7 +61,9 @@ export const StyledSection1 = styled.section`
 export const StyledSection2 = styled.section`
   background-color: ${({ theme }) => theme.colors.blue3};
   margin-top: -120px;
+  padding: 0 0 50px 0;
   height: 135vh;
+  clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 98%);
   .container {
     padding: 60px 0 0 0;
     color: ${({ theme }) => theme.colors.textWhite};
@@ -120,7 +122,7 @@ export const StyledSection2 = styled.section`
       }
     }
     & > .button {
-      margin: 60px 0 0 0;
+      margin: 70px 0 0 0;
       justify-self: center;
     }
   }
