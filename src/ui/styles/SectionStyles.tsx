@@ -127,3 +127,14 @@ export const StyledSection2 = styled.section`
     }
   }
 `;
+
+export const StyledSection3 = styled.section`
+background-color: ${({ theme }) => theme.colors.blue2};
+margin-top: -47px;
+height: 100vh;
+.container {
+  padding-top: 60px;
+  text-align: center;
+};
+
+`;
