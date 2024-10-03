@@ -8,6 +8,7 @@ declare module "styled-components" {
       blue1: string;
       blue2: string;
       blue3: string;
+      blue4: string;
     };
     fontSize: {
       small: string;

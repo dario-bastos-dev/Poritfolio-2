@@ -5,10 +5,11 @@ const theme = {
     blue1: "#00BAE1",
     blue2: "#090979",
     blue3: "#020024",
+    blue4: "#08053D"
   },
   fontSize: {
     smalL: ".5rem",
-    text: "1rem",
+    text: "1.2rem",
     subtitle: "1.4rem",
     title: "2.5rem",
     button: "1.6rem",

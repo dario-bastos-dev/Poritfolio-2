@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const StyledButton = styled.a`
+  width: 17rem;
   padding: 25px 15px;
   background-color: transparent;
   color: ${({ theme }) => theme.colors.textWhite};
@@ -16,6 +17,7 @@ export const StyledButton = styled.a`
       inset -10px -10px 30px ${({ theme }) => theme.shadows.shadowWhite4};
   }
 `;
+
 export const StyledButton2 = styled(StyledButton)`
   box-shadow: 20px 20px 30px ${({ theme }) => theme.shadows.shadowBlack3},
     -20px -20px 30px ${({ theme }) => theme.shadows.shadowWhite3};
@@ -129,12 +131,72 @@ export const StyledSection2 = styled.section`
 `;
 
 export const StyledSection3 = styled.section`
-background-color: ${({ theme }) => theme.colors.blue2};
-margin-top: -47px;
-height: 100vh;
-.container {
-  padding-top: 60px;
-  text-align: center;
-};
+  background-color: ${({ theme }) => theme.colors.blue4};
+  margin-top: -47px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: ${({ theme }) => theme.colors.textWhite};
+    text-align: center;
+
+    a {
+      margin: 60px 0 0 0;
+    }
+
+    h2 {
+      letter-spacing: 10px !important;
+    }
+
+    h2,
+    h3,
+    h4 {
+      font-family: ${({ theme }) => theme.font.ubunto};
+      font-size: ${({ theme }) => theme.fontSize.button};
+      margin: 0 0 5px 0;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    div {
+      margin: 60px 0 0 0;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+
+      .img {
+        margin: 0 40px 0 0;
+        display: flex;
+        justify-content: end;
+        img {
+          width: 400px;
+          height: 400px;
+          border-radius: 37px;
+          box-shadow: -20px 20px 60px ${({ theme }) => theme.shadows.shadow1},
+            20px -20px 60px ${({ theme }) => theme.shadows.shadowWhite4};
+        }
+      }
+
+      .text {
+        margin: 0 0 0 40px;
+        display: flex;
+        flex-direction: column;
+        text-align: start;
+
+        h4 {
+          margin: 0 0 20px 0;
+          color: ${({ theme }) => theme.colors.blue1};
+        }
+
+        p {
+          font-family: ${({ theme }) => theme.font.openSans};
+          font-size: ${({ theme }) => theme.fontSize.text};
+        }
+      }
+    }
+  }
 `;
