@@ -1,5 +1,6 @@
 import styled from "styled-components";
 
+// Modelo de botão
 export const StyledButton = styled.a`
   width: 17rem;
   padding: 25px 15px;
@@ -29,6 +30,9 @@ export const StyledButton2 = styled(StyledButton)`
   }
 `;
 
+// Modelo de seção - Criar um no final analisando oq se repete em todas as outras seções
+
+// Seções
 export const StyledSection1 = styled.section`
   background-image: url("src/assets/bg.jpg");
   background-repeat: no-repeat;
@@ -65,7 +69,7 @@ export const StyledSection2 = styled.section`
   margin-top: -120px;
   padding: 0 0 50px 0;
   height: 135vh;
-  clip-path: polygon(0 0, 100% 0%, 100% 100%, 0 98%);
+
   .container {
     padding: 60px 0 0 0;
     color: ${({ theme }) => theme.colors.textWhite};
@@ -132,11 +136,12 @@ export const StyledSection2 = styled.section`
 
 export const StyledSection3 = styled.section`
   background-color: ${({ theme }) => theme.colors.blue4};
-  margin-top: -47px;
+  margin-top: -28px;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
+  clip-path: polygon(0 0, 100% 3%, 100% 100%, 0 100%);
 
   .container {
     display: flex;
@@ -148,54 +153,63 @@ export const StyledSection3 = styled.section`
     a {
       margin: 60px 0 0 0;
     }
+  }
 
-    h2 {
-      letter-spacing: 10px !important;
-    }
+  div {
+    margin: 60px 0 0 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 
-    h2,
-    h3,
-    h4 {
-      font-family: ${({ theme }) => theme.font.ubunto};
-      font-size: ${({ theme }) => theme.fontSize.button};
-      margin: 0 0 5px 0;
-      text-transform: uppercase;
-      letter-spacing: 2px;
-    }
-
-    div {
-      margin: 60px 0 0 0;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-
-      .img {
-        margin: 0 40px 0 0;
-        display: flex;
-        justify-content: end;
-        img {
-          width: 400px;
-          height: 400px;
-          border-radius: 37px;
-          box-shadow: -20px 20px 60px ${({ theme }) => theme.shadows.shadow1},
-            20px -20px 60px ${({ theme }) => theme.shadows.shadowWhite4};
-        }
+    .img {
+      margin: 0 40px 0 0;
+      display: flex;
+      justify-content: end;
+      img {
+        width: 400px;
+        height: 400px;
+        border-radius: 37px;
+        box-shadow: -20px 20px 60px ${({ theme }) => theme.shadows.shadow1},
+          20px -20px 60px ${({ theme }) => theme.shadows.shadowWhite4};
       }
+    }
 
-      .text {
-        margin: 0 0 0 40px;
-        display: flex;
-        flex-direction: column;
-        text-align: start;
+    .text {
+      margin: 0 0 0 40px;
+      display: flex;
+      flex-direction: column;
+      text-align: start;
 
-        h4 {
-          margin: 0 0 20px 0;
-          color: ${({ theme }) => theme.colors.blue1};
-        }
+      h4 {
+        margin: 0 0 20px 0;
+        color: ${({ theme }) => theme.colors.blue1};
+      }
+    }
+  }
+`;
 
-        p {
-          font-family: ${({ theme }) => theme.font.openSans};
-          font-size: ${({ theme }) => theme.fontSize.text};
-        }
+export const StyledSection4 = styled.section`
+  background-color: ${({ theme }) => theme.colors.blue3};
+  margin-top: -48px;
+  height: 100vh;
+  clip-path: polygon(0 0, 100% 3%, 100% 100%, 0 100%);
+
+  .container {
+    padding: 80px;
+    text-align: center;
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 40px;
+      margin: 60px 0 0 0;
+
+      .project {
+        width: 18rem;
+        height: 18rem;
+        padding: 20px;
+        box-shadow: -20px 20px 60px ${({ theme }) => theme.shadows.shadowBlack3},
+          20px -20px 60px ${({ theme }) => theme.shadows.shadowWhite3};
+        border-radius: 20px;
       }
     }
   }
