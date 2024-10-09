@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 // Modelo de botão
 export const StyledButton = styled.a`
-  width: 17rem;
   padding: 25px 15px;
   background-color: transparent;
   color: ${({ theme }) => theme.colors.textWhite};
@@ -190,11 +189,11 @@ export const StyledSection3 = styled.section`
 export const StyledSection4 = styled.section`
   background-color: ${({ theme }) => theme.colors.blue3};
   margin-top: -48px;
-  height: 100vh;
+  height: 70vh;
   clip-path: polygon(0 0, 100% 3%, 100% 100%, 0 100%);
 
   .container {
-    padding: 80px;
+    padding: 120px 0;
     text-align: center;
 
     .projects {
@@ -205,11 +204,36 @@ export const StyledSection4 = styled.section`
 
       .project {
         width: 18rem;
-        height: 18rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         padding: 20px;
         box-shadow: -20px 20px 60px ${({ theme }) => theme.shadows.shadowBlack3},
           20px -20px 60px ${({ theme }) => theme.shadows.shadowWhite3};
         border-radius: 20px;
+
+        div {
+          display: flex;
+          flex-direction: column;
+
+          p {
+            font-weight: bold;
+            font-size: ${({ theme }) => theme.fontSize.subtitle};
+          }
+
+          a {
+            margin: 2rem 0;
+            padding: 10px 80px;
+            border-radius: 30px;
+            box-shadow: 10px 10px 20px ${({ theme }) => theme.shadows.shadow1},
+               -10px -10px 20px ${({ theme }) => theme.shadows.shadowWhite4};
+            font-size: ${({ theme }) => theme.fontSize.subtitle};
+            &:active {
+              box-shadow: inset 10px 10px 20px ${({ theme }) => theme.shadows.shadow1},
+               inset -10px -10px 20px ${({ theme }) => theme.shadows.shadowWhite4};
+            }
+          }
+        }
       }
     }
   }
