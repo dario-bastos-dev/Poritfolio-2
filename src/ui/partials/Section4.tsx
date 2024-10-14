@@ -1,5 +1,6 @@
 import React from "react";
 import { StyledButton, StyledSection4 } from "../styles/SectionStyles";
+import { Gear, Laptop, Storefront } from "@phosphor-icons/react";
 
 const Section4: React.FunctionComponent = () => {
   return (
@@ -9,20 +10,41 @@ const Section4: React.FunctionComponent = () => {
         <div className="projects">
           <div className="project">
             <div>
-              <p>Naturefork</p>
-              <StyledButton href="https://site-nutricionista-mauve.vercel.app/" target="_blank">Ver mais</StyledButton>
+              <Laptop size={68} weight="regular" color="#fff" />
+              <p className="title">Naturefork</p>
+              <p className="desc">
+                Landing page criada para a área de nutrção, focada em atrair
+                mais clientes.
+              </p>
+              <StyledButton
+                href="https://site-nutricionista-mauve.vercel.app/"
+                target="_blank"
+              >
+                Ver mais
+              </StyledButton>
             </div>
           </div>
           <div className="project">
             <div>
-              <p>Blog</p>
-              <StyledButton href="https://andrezza.firmadeadvocacia.adv.br/" target="_blank">Ver mais</StyledButton>
+              <Storefront size={69} weight="regular" color="#fff" />
+              <p className="title">Click Buy</p>
+              <p className="desc">
+                E-comercer completo, que te permite controlar e todo o seu
+                processo de venda, estoque, dentre outros, dentro de uma única
+                plataforma.
+              </p>
+              <p className="btn">Em desenvolvimento</p>
             </div>
           </div>
           <div className="project">
             <div>
-              <p>Job Finder</p>
-              <StyledButton href="https://job-finder-bwun.onrender.com" target="_blank">Ver mais</StyledButton>
+            <Gear size={68} weight="regular" color="#fff" />
+              <p className="title">Automação de atendimento</p>
+              <p className="desc">
+                Criação de um chatbot para realizar a interação inicial dos
+                clientes, qualificando o cliente e uma automação para adicionar
+                no seu CRM após a qualificação.
+              </p>
             </div>
           </div>
         </div>

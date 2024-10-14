@@ -189,7 +189,7 @@ export const StyledSection3 = styled.section`
 export const StyledSection4 = styled.section`
   background-color: ${({ theme }) => theme.colors.blue3};
   margin-top: -48px;
-  height: 70vh;
+  height: 90vh;
   clip-path: polygon(0 0, 100% 3%, 100% 100%, 0 100%);
 
   .container {
@@ -215,10 +215,20 @@ export const StyledSection4 = styled.section`
         div {
           display: flex;
           flex-direction: column;
+          align-items: center;
 
-          p {
+          .title {
+            font-family: ${({ theme }) => theme.font.ubunto};
             font-weight: bold;
             font-size: ${({ theme }) => theme.fontSize.subtitle};
+          }
+          .desc {
+            font-size: ${({ theme }) => theme.fontSize.text};
+          }
+
+          p.btn {
+            color: #c1c1c1;
+            cursor: default;
           }
 
           a {
@@ -226,11 +236,13 @@ export const StyledSection4 = styled.section`
             padding: 10px 80px;
             border-radius: 30px;
             box-shadow: 10px 10px 20px ${({ theme }) => theme.shadows.shadow1},
-               -10px -10px 20px ${({ theme }) => theme.shadows.shadowWhite4};
+              -10px -10px 20px ${({ theme }) => theme.shadows.shadowWhite4};
             font-size: ${({ theme }) => theme.fontSize.subtitle};
             &:active {
-              box-shadow: inset 10px 10px 20px ${({ theme }) => theme.shadows.shadow1},
-               inset -10px -10px 20px ${({ theme }) => theme.shadows.shadowWhite4};
+              box-shadow: inset 10px 10px 20px
+                  ${({ theme }) => theme.shadows.shadow1},
+                inset -10px -10px 20px
+                  ${({ theme }) => theme.shadows.shadowWhite4};
             }
           }
         }
