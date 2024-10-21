@@ -250,3 +250,62 @@ export const StyledSection4 = styled.section`
     }
   }
 `;
+
+export const StyledSection5 = styled.section`
+  background-color: ${({ theme }) => theme.colors.blue4};
+  margin-top: -48px;
+  height: 90vh;
+  clip-path: polygon(0 0, 100% 3%, 100% 100%, 0 100%);
+
+  .container {
+    padding: 120px 0;
+    text-align: center;
+
+    .subtitle {
+      font-size: ${({ theme }) => theme.fontSize.button};
+      letter-spacing: 3px;
+    }
+
+    .principal {
+      width: 35rem;
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      justify-self: center;
+
+      div.form {
+        padding: 20px;
+        background-color: ${({ theme }) => theme.colors.blue3};
+
+        form {
+          &,
+          label {
+            display: flex;
+            flex-direction: column;
+          }
+
+          label {
+            gap: 8px;
+          }
+
+          label.checkbox {
+            flex-direction: row;
+            gap: 10px;
+          }
+
+          gap: 30px;
+          text-align: left;
+
+          input:not(.check), textarea {
+            width: 30.75rem;
+            border-radius: 8px;
+          }
+
+          input:not(.check) {
+            height: 1rem;
+            padding: 5px;
+          }
+        }
+      }
+    }
+  }
+`;

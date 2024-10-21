@@ -4,6 +4,7 @@ import Section1 from "./ui/partials/Section1";
 import Section2 from "./ui/partials/Section2";
 import Section3 from "./ui/partials/Section3";
 import Section4 from "./ui/partials/Section4";
+import Section5 from "./ui/partials/Section5";
 
 function App() {
 
@@ -16,6 +17,7 @@ function App() {
       <Section2 />
       <Section3 />
       <Section4 />
+      <Section5 />
     </>
   );
 }
