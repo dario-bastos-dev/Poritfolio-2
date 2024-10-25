@@ -254,14 +254,15 @@ export const StyledSection4 = styled.section`
 export const StyledSection5 = styled.section`
   background-color: ${({ theme }) => theme.colors.blue4};
   margin-top: -48px;
-  height: 90vh;
+  height: 120vh;
   clip-path: polygon(0 0, 100% 3%, 100% 100%, 0 100%);
 
   .container {
-    padding: 120px 0;
+    padding: 100px 0;
     text-align: center;
 
     .subtitle {
+      margin: 0 0 50px 0;
       font-size: ${({ theme }) => theme.fontSize.button};
       letter-spacing: 3px;
     }
@@ -273,16 +274,21 @@ export const StyledSection5 = styled.section`
       justify-self: center;
 
       div.form {
-        padding: 20px;
-        background-color: ${({ theme }) => theme.colors.blue3};
+        padding: 30px;
+        margin: auto;
+        background-color: ${({ theme }) => theme.colors.blue4};
+        border-radius: 10px;
+        box-shadow: -25px 25px 60px ${({ theme }) => theme.shadows.shadow1},
+          25px -25px 60px ${({ theme }) => theme.shadows.shadowWhite4};
 
         form {
           &,
           label {
             display: flex;
             flex-direction: column;
+            font-family: ${({ theme }) => theme.font.openSans};
           }
-
+          
           label {
             gap: 8px;
           }
@@ -291,18 +297,47 @@ export const StyledSection5 = styled.section`
             flex-direction: row;
             gap: 10px;
           }
-
+          
           gap: 30px;
           text-align: left;
 
           input:not(.check), textarea {
             width: 30.75rem;
-            border-radius: 8px;
+            padding: 6px;
+            border-radius: 5px;
+            box-shadow: inset -7px 7px 10px ${({ theme }) => theme.colors.gray};
+          }
+
+          select {
+            width: 31.5rem;
+            padding: 5px;
+            border-radius: 5px;
+            box-shadow: inset -7px 7px 10px ${({ theme }) => theme.colors.gray};
           }
 
           input:not(.check) {
-            height: 1rem;
-            padding: 5px;
+            height: 1.5rem;
+          }
+
+          .input::placeholder {
+            font-weight: 600;
+          }
+
+          .btn {
+            margin-top: 40px;
+            padding: 8px;
+            background-color:${({ theme }) => theme.colors.blue1};
+            border: none;
+            border-radius: 5px;
+            color: ${({ theme }) => theme.colors.textWhite};
+            font-size: ${({ theme }) => theme.fontSize.text};
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            svg {
+              margin-left: 5px;
+            }
           }
         }
       }

@@ -1,3 +1,4 @@
+import { PaperPlaneRight } from "@phosphor-icons/react";
 import { StyledSection5 } from "../styles/SectionStyles";
 
 const Section5 = () => {
@@ -12,20 +13,37 @@ const Section5 = () => {
               <form action="">
                 <label htmlFor="name">
                   Nome:
-                  <input type="text" placeholder="Digite seu nome:" name="name" />
+                  <input
+                    type="text"
+                    placeholder="Digite seu nome"
+                    name="name"
+                    className="input"
+                  />
                 </label>
                 <label htmlFor="phone">
                   WhatsApp:
-                  <input type="text" placeholder="Digite seu número:" name="phone" />
+                  <input
+                    type="text"
+                    placeholder="Digite seu número"
+                    name="phone"
+                    className="input"
+                  />
                 </label>
                 <label htmlFor="email">
                   E-mail:
-                  <input type="text" placeholder="Digite seu e-mail:" name="email" />
+                  <input
+                    type="text"
+                    placeholder="Digite seu e-mail"
+                    name="email"
+                    className="input"
+                  />
                 </label>
                 <label htmlFor="soluction">
                   Selecione qual solução voce deseja:
-                  <select name="soluction" id="">
-                    <option value="E-comerce" selected>E-comerce</option>
+                  <select name="soluction" className="input">
+                    <option value="E-comerce" selected>
+                      E-comerce
+                    </option>
                     <option value="ERP">ERP</option>
                     <option value="Automação">Automação</option>
                     <option value="Site">Site</option>
@@ -33,12 +51,25 @@ const Section5 = () => {
                 </label>
                 <label htmlFor="desc">
                   Descreva o projeto:
-                  <textarea name="desc" placeholder="Fale mais sobre o que deseja criar"></textarea>
+                  <textarea
+                    name="desc"
+                    placeholder="Fale mais sobre o que deseja criar"
+                    className="input"
+                  ></textarea>
                 </label>
                 <label htmlFor="msg" className="checkbox">
-                <input type="checkbox" name="msg" value='Aceito' className="check" />
-                Aceito receber mensagens pelo e-mail e whatsapp
+                  <input
+                    type="checkbox"
+                    name="msg"
+                    value="Aceito"
+                    className="check"
+                  />
+                  Aceito receber mensagens pelo e-mail e whatsapp
                 </label>
+
+                <button type="submit" className="btn" >
+                  Enviar <PaperPlaneRight size={20} weight="regular" color="#fff" />
+                </button>
               </form>
             </div>
           </div>
